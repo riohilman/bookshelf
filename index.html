@@ -18,34 +18,45 @@
             <section>
                 <h2>Tambah Buku</h2>
                 <form id="bookForm">
-                <label for="title">Judul Buku</label>
-                <input type="text" id="title" required>
+                    <label for="title">Judul Buku</label>
+                    <input type="text" id="title" required>
 
-                <label for="author">Penulis</label>
-                <input type="text" id="author" required>
+                    <label for="author">Penulis</label>
+                    <input type="text" id="author" required>
 
-                <label for="pages">Jumlah Halaman</label>
-                <input type="number" id="pages" min="1" required>
+                    <label for="pages">Jumlah Halaman</label>
+                    <input type="number" id="pages" min="1" required>
 
-                <label for="genre">Genre</label>
-                <select id="genre" required>
-                    <option value="">Pilih genre</option>
-                    <option value="Fiksi">Fiksi</option>
-                    <option value="Non-fiksi">Non-fiksi</option>
-                    <option value="Teknologi">Teknologi</option>
-                    <option value="Bisnis">Bisnis</option>
-                    <option value="Lainnya">Lainnya</option>
-                </select>
+                    <label for="genre">Genre</label>
+                    <select id="genre" required>
+                        <option value="">Pilih genre</option>
+                        <option value="Fiksi">Fiksi</option>
+                        <option value="Non-fiksi">Non-fiksi</option>
+                        <option value="Teknologi">Teknologi</option>
+                        <option value="Bisnis">Bisnis</option>
+                        <option value="Lainnya">Lainnya</option>
+                    </select>
 
-                <label>Status Membaca</label>
-                <div>
-                    <label><input type="radio" name="status" value="Belum mulai" required> Belum mulai</label>
-                    <label><input type="radio" name="status" value="Sedang dibaca" required> Sedang dibaca</label>
-                    <label><input type="radio" name="status" value="Selesai" required> Selesai</label>
-                </div>
+                    <label>Status Membaca</label>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="status" value="Belum mulai" required>
+                            <span>Belum mulai</span>
+                        </label>
 
-                <button type="submit">Tambah Buku</button>
-                <p id="feedback"></p>
+                        <label class="radio-option">
+                            <input type="radio" name="status" value="Sedang dibaca" required>
+                            <span>Sedang dibaca</span>
+                        </label>
+
+                        <label class="radio-option">
+                            <input type="radio" name="status" value="Selesai" required>
+                            <span>Selesai</span>
+                        </label>
+                    </div>
+
+                    <button type="submit">Tambah Buku</button>
+                    <p id="feedback"></p>
                 </form>
             </section>
 
