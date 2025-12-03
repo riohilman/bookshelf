@@ -69,5 +69,31 @@ function renderTable() {
     });
 }
 
-function updateSummary() {
+function markFinished(id) {
+    books = books.map(book => {
+        if (book.id === id) {
+        return { ...book, status: "Selesai" };
+        }
+        return book;
+    });
+
+    renderTable();
+    updateSummary();
 }
+
+function deleteBook(id) {
+    books = books.filter(book => book.id !== id);
+    renderTable();
+    updateSummary();
+}
+
+function updateSummary() {
+    const total = books.length;
+    const finished = books.filter(b => b.status === "Selesai").length;
+    const reading = books.filter(b => b.status === "Sedang dibaca").length;
+
+    totalBooksEl.textContent = total;
+    finishedBooksEl.textContent = finished;
+    readingBooksEl.textContent = reading;
+}
+
