@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bookshelf - Aplikasi Pencatatan Buku</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
@@ -12,11 +13,74 @@
     </header>
     
     <main>
-        <p>Aplikasi pencatatan buku untuk UTS Pemrograman Front-End,</p>
+        <!-- FORM -->
+        <section>
+            <h2>Tambah Buku</h2>
+            <form id="bookForm">
+            <label for="title">Judul Buku</label>
+            <input type="text" id="title" required>
+
+            <label for="author">Penulis</label>
+            <input type="text" id="author" required>
+
+            <label for="pages">Jumlah Halaman</label>
+            <input type="number" id="pages" min="1" required>
+
+            <label for="genre">Genre</label>
+            <select id="genre" required>
+                <option value="">Pilih genre</option>
+                <option value="Fiksi">Fiksi</option>
+                <option value="Non-fiksi">Non-fiksi</option>
+                <option value="Teknologi">Teknologi</option>
+                <option value="Bisnis">Bisnis</option>
+                <option value="Lainnya">Lainnya</option>
+            </select>
+
+            <label>Status Membaca</label>
+            <div>
+                <label><input type="radio" name="status" value="Belum mulai" required> Belum mulai</label>
+                <label><input type="radio" name="status" value="Sedang dibaca" required> Sedang dibaca</label>
+                <label><input type="radio" name="status" value="Selesai" required> Selesai</label>
+            </div>
+
+            <button type="submit">Tambah Buku</button>
+            <p id="feedback"></p>
+            </form>
+        </section>
+
+        <!-- TABEL BUKU -->
+        <section>
+            <h2>Daftar Buku</h2>
+            <table>
+            <thead>
+            <tr>
+                <th>Judul</th>
+                <th>Penulis</th>
+                <th>Genre</th>
+                <th>Halaman</th>
+                <th>Status</th>
+                <th>Aksi</th>
+            </tr>
+            </thead>
+            <tbody id="bookTable"></tbody>
+            </table>
+        </section>
+
+        <!-- RINGKASAN -->
+        <section>
+            <h2>Ringkasan Membaca</h2>
+            <ul>
+            <li>Total buku: <span id="totalBooks">0</span></li>
+            <li>Selesai dibaca: <span id="finishedBooks">0</span></li>
+            <li>Sedang dibaca: <span id="readingBooks">0</span></li>
+            </ul>
+        </section>
     </main>
 
     <footer>
         <p>&copy; 2025 BookShelf - Aplikasi Pencatatan Buku</p>
     </footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
