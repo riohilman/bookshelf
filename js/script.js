@@ -40,7 +40,6 @@ bookForm.addEventListener("submit", function (e) {
     feedback.textContent = "Buku berhasil ditambahkan!";
     feedback.style.color = "green";
 
-    // nanti setelah ada renderTable & updateSummary kita panggil di sini
     renderTable();
     updateSummary();
 
