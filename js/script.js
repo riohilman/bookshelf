@@ -17,7 +17,6 @@ bookForm.addEventListener("submit", function (e) {
     const genre = document.getElementById("genre").value;
     const statusInput = document.querySelector("input[name='status']:checked");
 
-    // Validasi sederhana
     if (!title || !author || !genre || !statusInput || pages < 1) {
         feedback.textContent = "Semua field wajib diisi dan jumlah halaman minimal 1.";
         feedback.style.color = "red";
